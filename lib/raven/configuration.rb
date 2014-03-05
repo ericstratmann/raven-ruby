@@ -51,6 +51,9 @@ module Raven
     # Timeout waiting for the connection to open in seconds
     attr_accessor :open_timeout
 
+    # HTTP proxy to use
+    attr_accessor :proxy
+
     # Should the SSL certificate of the server be verified?
     attr_accessor :ssl_verification
 

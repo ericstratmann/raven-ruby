@@ -35,6 +35,10 @@ module Raven
             builder.adapter(*adapter)
           end
 
+          if self.configuration.proxy
+            conn.options[:proxy] = self.configuration.proxy
+          end
+
           if self.configuration.timeout
             conn.options[:timeout] = self.configuration.timeout
           end
